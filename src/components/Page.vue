@@ -129,7 +129,7 @@ export default {
       this.activestory = text;
     },
     getData: function() {
-      var url = "http://localhost:3000/tales";
+      var url = "https://talesserve.herokuapp.com/tales";
 
       axios
         .get(url)
