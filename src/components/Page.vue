@@ -25,7 +25,7 @@
         v-if="primaryDrawer.type !== 'permanent'"
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title>Historias</v-toolbar-title>
+      <v-toolbar-title>Historias para no dejar de ser niños</v-toolbar-title>
       <v-row justify="end" style="margin-top: 10px;">
         <v-switch v-model="$vuetify.theme.dark" primary label="Dark"></v-switch>
       </v-row>
@@ -100,7 +100,7 @@
     </v-content>
 
     <v-footer :inset="footer.inset" app>
-      <span class="px-4">Celso Sanchez&copy; {{ new Date().getFullYear() }}</span>
+      <span class="px-4">Historias por Eneida Gonzalez Trujillo&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
