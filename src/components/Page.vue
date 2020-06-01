@@ -102,9 +102,8 @@
     <v-footer :inset="footer.inset" app>
       <v-row align="end" >
         <v-switch v-model="$vuetify.theme.dark" primary label="Obscuro"></v-switch>
-        <span class="px-4">E. Gonzalez Trujillo&copy; {{ new Date().getFullYear() }}</span>
       </v-row>
-      
+      <span class="px-4">E. Gonzalez Trujillo&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
