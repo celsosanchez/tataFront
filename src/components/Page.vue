@@ -9,17 +9,15 @@
       overflow
     >
       <v-list nav dense>
-        <v-list-item-group  active-class=" text--accent-4">
+        <v-list-item-group active-class=" text--accent-4">
           <v-list-item v-for="item in tales" :key="item._id" @click="set(item)">
             <v-list-item-icon>
               <v-icon>mdi-script-text</v-icon>
             </v-list-item-icon>
-            <v-list-item-title >{{item.Title}}</v-list-item-title>
+            <v-list-item-title>{{item.Title}}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
-      
-      
     </v-navigation-drawer>
 
     <v-app-bar :clipped-left="primaryDrawer.clipped" app>
@@ -28,7 +26,6 @@
         @click.stop="primaryDrawer.model = !primaryDrawer.model"
       ></v-app-bar-nav-icon>
       <v-toolbar-title>Para no dejar de ser niños</v-toolbar-title>
-      
     </v-app-bar>
 
     <v-content>
@@ -39,8 +36,8 @@
               <v-card-text>
                 <v-row align="center" justify="center" style="margin: 3vw">
                   <h3 style="margin-bottom: 1vw">{{activestory.Title}}</h3>
-                    {{activestory.Body}}
-                    <!-- <span>Scheme</span> -->
+                  {{activestory.Body}}
+                  <!-- <span>Scheme</span> -->
                   <!-- </v-col> -->
                   <!-- <v-col
                     cols="12"
@@ -92,18 +89,22 @@
                 <v-spacer></v-spacer>
                 <v-btn text>Cancel</v-btn>
                 <v-btn text color="primary">Submit</v-btn>
-              </v-card-actions> -->
+              </v-card-actions>-->
             </v-card>
           </v-col>
         </v-row>
       </v-container>
     </v-content>
 
-    <v-footer :inset="footer.inset" app>
-      <v-row align="end" >
+    <v-footer app>
+      <!-- <v-row  >
         <v-switch v-model="$vuetify.theme.dark" primary label="Obscuro"></v-switch>
-      </v-row>
-      <span class="px-4">E. Gonzalez Trujillo&copy; {{ new Date().getFullYear() }}</span>
+      </v-row>-->
+      <span class="px-4">Historias por E. Gonzalez Trujillo&copy; {{ new Date().getFullYear() }}</span>
+      <v-btn icon color="blue" @click="$vuetify.theme.dark = !$vuetify.theme.dark">
+              <v-icon>mdi-theme-light-dark</v-icon>
+            </v-btn>
+      <!-- <v-switch  style="float: center; margin-top: 0px;margin-bottom: 0px; width: 2vm" v-model="$vuetify.theme.dark" primary label="Obscuro"></v-switch> -->
     </v-footer>
   </v-app>
 </template>
@@ -141,13 +142,12 @@ export default {
           this.tales = this.tales.reverse();
         })
         .then(() => {
-          this.activestory =this.tales[0];
+          this.activestory = this.tales[0];
         });
     }
   },
   created() {
     this.getData();
-    
   }
 };
 </script>
