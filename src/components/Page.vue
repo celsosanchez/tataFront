@@ -103,7 +103,8 @@
       <v-row align="end" style="margin-top: 10px;">
         <v-switch v-model="$vuetify.theme.dark" primary label="Obscuro"></v-switch>
       </v-row>
-      <span class="px-4">Historias por Eneida Gonzalez Trujillo&copy; {{ new Date().getFullYear() }}</span>
+      <!-- &copy; {{ new Date().getFullYear() }} -->
+      <span class="px-4">E. Gonzalez Trujillo</span>
     </v-footer>
   </v-app>
 </template>
